@@ -37,6 +37,22 @@ workHours.forEach((hourTxt, i) => {
     blockCon.append(hrRow);
 });
 
+// Retrieves any saved inputs from Local Storage
+function init() {
+    workHours.forEach((hour) => {
+        var locKey = "text-input-" + hour;
+        var locVal = localStorage.getItem(locKey);
+        
+        var timeBlock = $("#" + locKey);
+
+        if (locVal) {
+            console.log(locVal);
+            timeBlock.val(locVal)
+        }
+    
+    })
+}
+
 // Stores user input in Local Storage
 function saveTxt(event) {
     var userClick = event.target;
@@ -52,14 +68,4 @@ function saveTxt(event) {
 
 blockCon.on("click", saveTxt);
 
-// function updateTxt(event) {
-//     var userChange = event.target;
-
-//     if (userChange.tagName != "TEXTAREA") {
-//         return
-//     }
-    
-//     console.log(userChange.value);
-// }
-
-// blockCon.on("change", updateTxt)
+init();
