@@ -5,3 +5,4 @@ Link to Live Application:
 https://masonmccoy.github.io/daily-scheduler/
 
 Screenshot:
+https://github.com/MasonMcCoy/daily-scheduler/blob/main/assets/images/application-screenshot.PNG
