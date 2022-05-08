@@ -46,7 +46,6 @@ function init() {
         var timeBlock = $("#" + locKey);
 
         if (locVal) {
-            console.log(locVal);
             timeBlock.val(locVal)
         }
     
@@ -62,7 +61,7 @@ function saveTxt(event) {
     }
 
     var userInput = userClick.previousElementSibling.firstElementChild.firstElementChild;
-    console.log(userInput)
+    
     localStorage.setItem(userInput.id, userInput.value);
 }
 
